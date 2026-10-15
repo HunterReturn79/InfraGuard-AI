@@ -9,5 +9,7 @@ font = "sans serif"
 gatherUsageStats = false
 
 [server]
-headless = false
+# A managed runtime has no interactive browser session.  Running headlessly
+# keeps the Streamlit server alive for the platform health check.
+headless = true
 port = 8501
