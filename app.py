@@ -519,7 +519,7 @@ def generate_industrial_telemetry(hours_history=48, random_seed=42):
     df = pd.DataFrame(records)
     return df
 
-@st.cache_resource
+@st.cache_data
 def train_isolation_forest_engine(df_train, contamination_rate=0.08, n_estimators=150):
     """
     Fits an IsolationForest model on continuous multi-channel industrial sensor measurements.
